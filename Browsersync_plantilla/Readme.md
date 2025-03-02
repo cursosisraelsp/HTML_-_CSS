@@ -38,7 +38,18 @@ browserSync.init({
     open: false,                          // Evítase abrir unha nova pestaña
 });
 ```
+> [!WARNING]
+> Se tes problemas actualizando o javascript, mira de cambiar a propiedade `open` a `true`, isto fará que se esté a abrir de maneira continuada cada vez que actualices o programa o navegador
+```javascript
+const browserSync = require('browser-sync').create();
 
+// Configurar BrowserSync
+browserSync.init({
+    proxy: `http://localhost:${port}`,    // Usar o servidor Express
+    files: ['./public/**/*.*'],           // Monitorear cambios nos arquivos estáticos
+    open: false,                          // Evítase abrir unha nova pestaña
+});
+```
 ## Nodemon
 
 > Este paquete fará que os cambios que vai facendo no arquivo `server.js`, serán actualizados de maneira automática.
