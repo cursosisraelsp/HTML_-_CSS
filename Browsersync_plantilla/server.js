@@ -41,5 +41,6 @@ const server = app.listen(port, () => {
 browserSync.init({
     proxy: `http://localhost:${port}`,    // Usar o servidor Express
     files: ['./public/**/*.*'],           // Monitorear cambios nos arquivos estáticos
-    open: false,                          // Evítase abrir unha nova pestaña
+    //open: false,                          // Evítase abrir unha nova pestaña
+    open: true                            // Está a true xa que as veces pode dar problemas a actualización de javascript no cliente
 });
