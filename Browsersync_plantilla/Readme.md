@@ -47,7 +47,7 @@ const browserSync = require('browser-sync').create();
 browserSync.init({
     proxy: `http://localhost:${port}`,    // Usar o servidor Express
     files: ['./public/**/*.*'],           // Monitorear cambios nos arquivos estáticos
-    open: false,                          // Evítase abrir unha nova pestaña
+    open: true,                          // Evítase abrir unha nova pestaña
 });
 ```
 ## Nodemon
